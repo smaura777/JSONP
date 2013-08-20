@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>JSONP</title>
+	<meta name="generator" content="BBEdit 10.5" />
+</head>
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+function run_json(json){
+	alert("function called with "+ arguments.length + " arguments "+ arguments[0]);
+    if (arguments.length == 1){
+        alert($.parseJSON('{"first":"samuel","last":"maura","code":"1122","user":"elegy"}')); 
+        alert($.parseJSON(''+arguments[0]+''));    	
+    }
+    else {
+      alert('invalid arguments');
+    }
+
+}
+
+
+</script>
+<script src="http://localhost/function_util.php"></script>
+<script src="http://localhost/index.php?func=tester"></script>
+
+</body>
+</html>
